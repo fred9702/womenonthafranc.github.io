@@ -1,0 +1,247 @@
+body {
+	background-color: #F7D618;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+    overflow: ;
+}
+.container {
+    background-color: #F7D618;
+    margin: 50px;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+/*-------- flex container --------*/
+.flex-container {
+	display: flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-box;
+	display: -webkit-flex;
+	justify-content: space-around;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	-webkit-flex-flow: row wrap;
+	position: relative;
+}
+.flex-item {
+	color: #fff;
+	height: 210px;
+	margin: 10px 0;
+	padding: 0;
+	width: 225px;
+	position: relative;
+}
+.flex-item-inner {
+	display: flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-box;
+	display: -webkit-flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	height: 210px;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+.flex-item-inner a {
+	color: #fff;
+	cursor: pointer;
+}
+
+/*-------- cards --------*/
+.card-front,
+.card-back {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 185px;
+	height: 170px;
+	padding: 20px;
+	margin: 0;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.6s;
+	justify-content: flex-end;
+}
+.card-front i.tile-icon {
+	display: block;
+	margin: 10px auto 20px auto;
+	text-align: center;
+}
+.card-front h4 {
+	font-size: 18px;
+	font-weight: normal;
+	margin: 10px 0;
+}
+.card-front p.detail {
+	font-size: 24px;
+	font-weight: bold;
+	margin: 0;
+}
+.card-front.bg-violet {
+	background-color: #702082;
+}
+.card-front.bg-magenta {
+	background-color: #c110a0;
+}
+.card-front.bg-blue {
+	background-color: #00a062;
+}
+.card-front.bg-green {
+	background-color: #99c399;
+}
+.card-back {
+	background-color: #1e1e1e;
+	-webkit-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+}
+
+.card-back > * {
+    text-decoration: none;
+}
+.card-back p.title {
+	color: #000;
+	margin-top: 0;
+	text-transform: uppercase;
+}
+.card-back p.desc {
+	color: #63666a;
+}
+.card-back p.link {
+	color: #702082;
+}
+.card-back.bg-violet {
+	background-color: #d8d7df;
+}
+.card-back.bg-magenta {
+	background-color: #ddd0cf;
+}
+.card-back.bg-blue {
+	background-color: #c8d7df;
+}
+.card-back.bg-green {
+	background-color: #d9e6dc;
+}
+
+/*-------- cards / flip effect --------*/
+.flex-item:hover .card-front {
+	-webkit-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+}
+.flex-item:hover .card-back {
+	-webkit-transform: rotateY(0);
+	transform: rotateY(0);
+}
+
+/*-- Modal --*/
+
+.modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+.modalDialog > div {
+	width: 400px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #fff;
+	background: -moz-linear-gradient(#fff, #999);
+	background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999);
+}
+
+/*-----NavBar---*/
+
+nav ul {
+    position: sticky;
+    top: 0;
+    display: flex;
+    list-style: none;
+    float: right;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 2rem;
+}
+
+nav ul li a.current {
+    background-color: goldenrod;
+}
+
+#logo {
+    float: left;
+    width: 40%;
+    height: 17.5%;
+}
+
+
+
+
+.wrapper {
+    height: 100vh;
+    background-color: #F7D618;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+section {
+        background: rgb(0,0,0,0);
+        color: white;
+        padding: 1em;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        width: auto;
+}
+        
+
+
+.wrapper > * {
+    margin: 10px;
+}
+
+
+.survey {
+    width: 100vw;
+    height: 100vh;
+}
+
+.survey img {
+    padding: 10px;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
